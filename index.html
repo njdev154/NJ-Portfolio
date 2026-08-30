@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NJ Dev — Développeur Web Junior en formation</title>
+  <meta name="description" content="Portfolio de Junior Ngoran (NJ Dev), étudiant en informatique (BTS IDA, admis en Licence 3), développeur web junior à la recherche d'un stage de validation à Abidjan.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Fond en filigrane, discret — on garde l'identité visuelle -->
+  <div class="blueprint-grid" aria-hidden="true"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">NJ<span>_</span>DEV</a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" aria-current="page">Accueil</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="apropos.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="documents/CV_NGoran_Junior_Charmel_Privat.pdf" target="_blank" rel="noopener" style="color: var(--amber);">CV</a></li>
+          <!-- Le CV sera ajouté ici dès que j'aurai le PDF -->
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">MENU</button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">Étudiant en informatique — Développement d'Applications</p>
+        <h1>NJ Dev<span class="accent">.</span></h1>
+        <p class="lede" style="font-size: 1.3rem; color: var(--paper);">
+          Développeur Web Junior — en formation.
+        </p>
+        <p class="lede">
+          Je crée des sites et des interfaces simples, avec l'envie de
+          progresser à chaque projet. Actuellement à la recherche d'un
+          stage de validation à Abidjan.
+        </p>
+
+        <div class="tag-row" style="margin-top: 1.2rem;">
+          <span class="tag" style="border-color: var(--amber); color: var(--amber);">🎓 Admis en Licence 3</span>
+          <span class="tag" style="border-color: var(--amber); color: var(--amber);">📍 Abidjan, Côte d'Ivoire</span>
+          <span class="tag" style="border-color: var(--amber); color: var(--amber);">🔎 Stage de validation recherché</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="projets.html" class="btn btn-primary">Voir mes projets</a>
+          <a href="documents/CV_NGoran_Junior_Charmel_Privat.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Télécharger mon CV</a>
+        </div>
+      </div>
+
+      <div class="hero-photo-frame">
+        <img src="images/photo.jpg" alt="Photo de Junior Ngoran (NJ Dev)">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJETS EN AVANT ===== -->
+  <section id="projets">
+    <div class="container panel">
+      <div class="section-head">
+        <p class="eyebrow">Mon travail</p>
+        <h2>Mes projets</h2>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Projet 1 : CIBanque -->
+        <article class="project-card">
+          <div class="project-thumb">
+            <img src="images/cibanque-preview.jpg" alt="Capture d'écran du site CIBanque">
+          </div>
+          <div class="project-body">
+            <span class="project-rev">Projet terminé</span>
+            <h3>CIBanque</h3>
+            <p>Prototype d'interface bancaire pour le contexte ivoirien (FCFA, Orange Money, Wave, MTN MoMo).</p>
+            <div class="tag-row">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <a href="projets.html#cibanque" class="project-link">Voir le détail</a>
+          </div>
+        </article>
+
+        <!-- Projet 2 : Pigier Connect -->
+        <article class="project-card">
+          <div class="project-thumb">
+            <img src="images/pigier-connect-preview.jpg" alt="Capture d'écran du site Pigier Connect">
+          </div>
+          <div class="project-body">
+            <span class="project-rev">Projet terminé</span>
+            <h3>Pigier Connect</h3>
+            <p>Site vitrine et portail de préinscription pour Pigier Yopougon.</p>
+            <div class="tag-row">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <a href="projets.html#pigier-connect" class="project-link">Voir le détail</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== APERÇU COMPÉTENCES ===== -->
+  <section id="competences">
+    <div class="container panel">
+      <div class="section-head">
+        <p class="eyebrow">Honnêtement</p>
+        <h2>Mes compétences</h2>
+      </div>
+
+      <div class="annotation-list">
+        <div class="annotation">
+          <span class="annotation-code">Bases</span>
+          <div class="annotation-body">
+            <h4>HTML</h4>
+            <p>Structure de pages web, formulaires.</p>
+          </div>
+        </div>
+        <div class="annotation">
+          <span class="annotation-code">Bases</span>
+          <div class="annotation-body">
+            <h4>CSS</h4>
+            <p>Mise en page, responsive design.</p>
+          </div>
+        </div>
+        <div class="annotation">
+          <span class="annotation-code">Débutant</span>
+          <div class="annotation-body">
+            <h4>JavaScript</h4>
+            <p>Interactions simples, logique de base.</p>
+          </div>
+        </div>
+        <div class="annotation">
+          <span class="annotation-code">Bases</span>
+          <div class="annotation-body">
+            <h4>Git / GitHub</h4>
+            <p>Gestion et partage de projets.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container footer-row">
+      <span>© 2026 NJ Dev</span>
+      <div class="footer-links">
+        <a href="https://github.com/njdev154" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/junior-ngoran/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:ngoranjunior154@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

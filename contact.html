@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — NJ Dev</title>
+  <meta name="description" content="Contacter NJ Dev par email, formulaire, GitHub ou LinkedIn.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Styles spécifiques au formulaire — propres à cette page,
+       donc gardés ici plutôt que dans le fichier CSS partagé. */
+    .form-grid {
+      display: grid;
+      gap: 1.2rem;
+      max-width: 560px;
+    }
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .form-field label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--amber);
+    }
+    .form-field input,
+    .form-field textarea {
+      background-color: var(--paper);
+      color: var(--ink-text);
+      border: 1px solid var(--ink-line-faint);
+      padding: 0.8rem 1rem;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      border-radius: var(--radius);
+    }
+    .form-field input:focus,
+    .form-field textarea:focus {
+      outline: 2px solid var(--amber);
+      outline-offset: 2px;
+    }
+    .form-field textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--gap-lg);
+    }
+    .contact-info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .contact-info-list a {
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+    .contact-info-list a span.label {
+      font-size: 0.7rem;
+      color: var(--amber);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .contact-info-list a:hover span.value {
+      color: var(--amber);
+    }
+    #formStatus {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      margin-top: 0.8rem;
+    }
+    @media (max-width: 860px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="blueprint-grid" aria-hidden="true"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">NJ<span>_</span>DEV</a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="apropos.html">À propos</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li><a href="documents/CV_NGoran_Junior_Charmel_Privat.pdf" target="_blank" rel="noopener" style="color: var(--amber);">CV</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">MENU</button>
+    </div>
+  </header>
+
+  <!-- ===== EN-TÊTE ===== -->
+  <section class="hero" style="min-height: 30vh;">
+    <div class="container">
+      <h1 style="margin-top: 1rem;">Parlons de votre projet</h1>
+      <p class="lede" style="margin-top: 1rem;">
+        Stage, alternance, collaboration ou simple question — n'hésite pas à me contacter.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="container panel contact-grid">
+
+      <!-- Formulaire -->
+      <div>
+        <p class="eyebrow">Écris-moi directement</p>
+        <h2 style="margin: 0.8rem 0 1.5rem;">Formulaire</h2>
+
+        <!--
+          Formulaire branché sur Formspree (compte NJ Dev).
+          Le JavaScript dans js/main.js gère l'envoi en AJAX pour
+          afficher un message de confirmation sans recharger la page.
+        -->
+        <form class="form-grid" id="contactForm" action="https://formspree.io/f/mgaevrwr" method="POST">
+          <div class="form-field">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="justify-self: start;">Envoyer le message</button>
+          <p id="formStatus" role="status"></p>
+        </form>
+      </div>
+
+      <!-- Coordonnées directes -->
+      <div>
+        <p class="eyebrow">Ou en direct</p>
+        <h2 style="margin: 0.8rem 0 1.5rem;">Coordonnées</h2>
+        <div class="contact-info-list">
+          <a href="mailto:ngoranjunior154@gmail.com">
+            <span class="label">Email</span>
+            <span class="value">ngoranjunior154@gmail.com</span>
+          </a>
+          <a href="tel:+2250161506296">
+            <span class="label">Téléphone</span>
+            <span class="value">01 61 50 62 96 / 07 00 39 91 34</span>
+          </a>
+          <a href="https://github.com/njdev154" target="_blank" rel="noopener">
+            <span class="label">GitHub</span>
+            <span class="value">github.com/njdev154</span>
+          </a>
+          <a href="https://www.linkedin.com/in/junior-ngoran/" target="_blank" rel="noopener">
+            <span class="label">LinkedIn</span>
+            <span class="value">linkedin.com/in/junior-ngoran</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container footer-row">
+      <span>© 2026 NJ Dev — Construit avec HTML, CSS &amp; JS</span>
+      <div class="footer-links">
+        <a href="https://github.com/njdev154" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/junior-ngoran/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:ngoranjunior154@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
