@@ -11,19 +11,19 @@
    tu ne modifies QUE cette section. */
 :root {
   /* Couleurs */
-  --ink-dark: #0E1B1A;       /* fond principal, bleu-sapin très sombre */
-  --ink-line: #C9D6D3;       /* lignes de grille, texte clair sur fond sombre */
-  --ink-line-faint: #C9D6D340; /* même couleur mais transparente, pour la grille */
-  --amber: #FFD23F;          /* accent principal — le "tampon" */
-  --rust: #C1443C;           /* accent secondaire — annotations, jamais en masse */
-  --paper: #F6F3EC;          /* surface claire pour les cartes */
-  --paper-dim: #E8E3D6;      /* variante un peu plus foncée du papier */
-  --ink-text: #1B2523;       /* texte sombre sur fond clair */
+  --ink-dark: #0e1b1a; /* fond principal, bleu-sapin très sombre */
+  --ink-line: #c9d6d3; /* lignes de grille, texte clair sur fond sombre */
+  --ink-line-faint: #c9d6d340; /* même couleur mais transparente, pour la grille */
+  --amber: #ffd23f; /* accent principal — le "tampon" */
+  --rust: #c1443c; /* accent secondaire — annotations, jamais en masse */
+  --paper: #f6f3ec; /* surface claire pour les cartes */
+  --paper-dim: #e8e3d6; /* variante un peu plus foncée du papier */
+  --ink-text: #1b2523; /* texte sombre sur fond clair */
 
   /* Typographie */
-  --font-display: 'Space Grotesk', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  --font-mono: 'IBM Plex Mono', monospace;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
 
   /* Espacements réutilisables */
   --gap-sm: 0.5rem;
@@ -98,7 +98,9 @@ ul {
 }
 
 /* ---- 4. TYPOGRAPHIE GÉNÉRALE ---- */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-display);
   font-weight: 700;
   line-height: 1.1;
@@ -185,7 +187,7 @@ section {
 }
 
 .nav-links a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
@@ -235,7 +237,7 @@ section {
 }
 
 .stamp::before {
-  content: '●';
+  content: "●";
   font-size: 0.6rem;
 }
 
@@ -250,7 +252,7 @@ section {
 
 /* petit coin décoratif, discret, rappel de l'identité "technique" */
 .panel::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0.6rem;
   right: 0.6rem;
@@ -389,12 +391,14 @@ section {
   position: relative;
   display: flex;
   flex-direction: column;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px -20px rgba(0,0,0,0.5);
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
 }
 
 .project-thumb {
@@ -449,7 +453,7 @@ section {
 
 .project-body p {
   font-size: 0.95rem;
-  color: #4A5250;
+  color: #4a5250;
 }
 
 .tag-row {
@@ -480,7 +484,7 @@ section {
 }
 
 .project-link::after {
-  content: '→';
+  content: "→";
   transition: transform 0.2s ease;
 }
 
@@ -547,7 +551,236 @@ footer {
   color: var(--amber);
 }
 
-/* ---- 16. RESPONSIVE (mobile) ---- */
+/* ---- 16. CLASSES RÉUTILISABLES (à la place des style="..." dans le HTML) ---- */
+.nav-cv {
+  color: var(--amber);
+}
+
+.hero-compact {
+  min-height: 30vh;
+}
+
+.lede-strong {
+  font-size: 1.3rem;
+  color: var(--paper);
+}
+
+.lede-follow {
+  margin-top: 1rem;
+}
+
+.lede-tight {
+  margin-top: 0.5rem;
+}
+
+.text-accent {
+  color: var(--amber);
+}
+
+.hero-tags {
+  margin-top: 1.2rem;
+}
+
+.tag-accent {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+.tag-row-follow {
+  margin-top: 1rem;
+}
+
+.tag-row-block {
+  margin-bottom: 1.5rem;
+}
+
+.project-title {
+  margin-top: 0.5rem;
+}
+
+.actions-follow {
+  margin-top: 2rem;
+}
+
+.eyebrow-follow {
+  margin-top: 2rem;
+}
+
+.page-heading {
+  margin-top: 1rem;
+}
+
+.contact-heading {
+  margin: 0.8rem 0 1.5rem;
+}
+
+.btn-start {
+  justify-self: start;
+}
+
+/* ---- 17. LISTES "CE QUE J'AI APPRIS" (page projets) ---- */
+.learned-list {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+.learned-list li {
+  margin-bottom: 0.4rem;
+  color: var(--ink-line);
+}
+
+.subhead {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--amber);
+  margin-top: 1.8rem;
+}
+
+/* ---- 18. TIMELINE (page à propos) ---- */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1rem;
+  border-left: 2px solid var(--amber);
+  padding-left: 1.2rem;
+}
+
+.timeline-tag {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--amber);
+}
+
+.timeline-body h4 {
+  font-family: var(--font-display);
+  color: var(--paper);
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-body p {
+  font-size: 0.9rem;
+  color: var(--ink-line);
+}
+
+/* ---- 19. FORMULAIRE DE CONTACT ---- */
+.form-grid {
+  display: grid;
+  gap: 1.2rem;
+  max-width: 560px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-field label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+
+.form-field input,
+.form-field textarea {
+  background-color: var(--paper);
+  color: var(--ink-text);
+  border: 1px solid var(--ink-line-faint);
+  padding: 0.8rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  border-radius: var(--radius);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-lg);
+}
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-info-list a {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.contact-info-list a span.label {
+  font-size: 0.7rem;
+  color: var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.contact-info-list a:hover span.value {
+  color: var(--amber);
+}
+
+#formStatus {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  margin-top: 0.8rem;
+}
+
+/* ---- 20. BOUTON RETOUR EN HAUT ---- */
+.back-to-top {
+  position: fixed;
+  right: 1.4rem;
+  bottom: 1.4rem;
+  z-index: 90;
+  width: 2.6rem;
+  height: 2.6rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--amber);
+  color: var(--ink-dark);
+  border: none;
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.back-to-top.is-visible {
+  display: flex;
+}
+
+.back-to-top:hover {
+  background-color: var(--paper);
+}
+
+/* ---- 21. RESPONSIVE (mobile) ---- */
 @media (max-width: 860px) {
   .hero-grid {
     grid-template-columns: 1fr;
@@ -586,5 +819,13 @@ footer {
   .annotation {
     grid-template-columns: 1fr;
     gap: 0.3rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
   }
 }

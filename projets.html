@@ -1,153 +1,317 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projets — NJ Dev</title>
-  <meta name="description" content="Les projets réalisés par NJ Dev : CIBanque et Pigier Connect.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projets — NJ Dev</title>
+    <meta
+      name="description"
+      content="Les projets réalisés par NJ Dev : Dona CI, Passerelle, CIBanque et Pigier Connect."
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    .learned-list { margin-top: 1rem; padding-left: 1.2rem; }
-    .learned-list li { margin-bottom: 0.4rem; color: var(--ink-line); }
-    .subhead { font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--amber); margin-top: 1.8rem; }
-  </style>
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .learned-list {
+        margin-top: 1rem;
+        padding-left: 1.2rem;
+      }
+      .learned-list li {
+        margin-bottom: 0.4rem;
+        color: var(--ink-line);
+      }
+      .subhead {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--amber);
+        margin-top: 1.8rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blueprint-grid" aria-hidden="true"></div>
 
-  <div class="blueprint-grid" aria-hidden="true"></div>
+    <!-- ===== NAVIGATION ===== -->
+    <header class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">NJ<span>_</span>DEV</a>
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projets.html" aria-current="page">Projets</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <a
+                href="documents/CV_NGoran_Junior_Charmel_Privat.pdf"
+                target="_blank"
+                rel="noopener"
+                style="color: var(--amber)"
+                >CV</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+        >
+          MENU
+        </button>
+      </div>
+    </header>
 
-  <!-- ===== NAVIGATION ===== -->
-  <header class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo">NJ<span>_</span>DEV</a>
-      <nav>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="projets.html" aria-current="page">Projets</a></li>
-          <li><a href="apropos.html">À propos</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="documents/CV_NGoran_Junior_Charmel_Privat.pdf" target="_blank" rel="noopener" style="color: var(--amber);">CV</a></li>
-        </ul>
-      </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">MENU</button>
-    </div>
-  </header>
-
-  <!-- ===== EN-TÊTE DE PAGE ===== -->
-  <section class="hero" style="min-height: 30vh;">
-    <div class="container">
-      <h1>Mes projets</h1>
-      <p class="lede" style="margin-top: 1rem;">
-        Deux projets personnels réalisés en HTML, CSS et JavaScript.
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== PROJET 1 : CIBANQUE ===== -->
-  <section id="cibanque">
-    <div class="container panel">
-      <div class="section-head">
-        <div class="project-detail-embed">
-          <img src="images/cibanque-preview.jpg" alt="Capture d'écran du site CIBanque">
-        </div>
-        <span class="project-rev">Projet terminé</span>
-        <h2 style="margin-top: 0.5rem;">CIBanque</h2>
-        <p class="lede" style="margin-top: 1rem;">
-          Prototype d'interface bancaire, un projet personnel inspiré des
-          services financiers accessibles en Côte d'Ivoire (FCFA, Orange
-          Money, Wave, MTN MoMo). Site 100% statique, sans serveur : les
-          données sont gérées avec <code>localStorage</code> et la
-          connexion/les transactions sont simulées.
+    <!-- ===== EN-TÊTE DE PAGE ===== -->
+    <section class="hero" style="min-height: 30vh">
+      <div class="container">
+        <h1>Mes projets</h1>
+        <p class="lede" style="margin-top: 1rem">
+          Une sélection de projets réalisés en HTML, CSS, JavaScript, PHP et Laravel.
         </p>
+      </div>
+    </section>
 
-        <div class="tag-row" style="margin-top: 1rem;">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
-        </div>
+    <!-- ===== PROJET 1 : DONA CI ===== -->
+    <section id="dona-ci">
+      <div class="container panel">
+        <div class="section-head">
+          <div class="project-detail-embed">
+            <img
+              src="images/dona-ci-preview.png"
+              alt="Capture d'écran de Dona CI"
+            />
+          </div>
+          <span class="project-rev">Site vitrine</span>
+          <h2 style="margin-top: 0.5rem">Dona CI</h2>
+          <p class="lede" style="margin-top: 1rem">
+            Site de sensibilisation consacré au don de sang en Côte d'Ivoire.
+            Le projet présente clairement les informations essentielles,
+            accompagne les organisations qui souhaitent organiser une collecte
+            et oriente les visiteurs vers les bonnes démarches.
+          </p>
 
-        <p class="subhead">Ce que j'ai travaillé</p>
-        <ul class="learned-list">
-          <li>Structure HTML de 8 pages liées entre elles</li>
-          <li>Mise en page CSS (mise en forme des tableaux de bord, formulaires)</li>
-          <li>Interactions JavaScript simples (connexion, historique simulés)</li>
-        </ul>
+          <div class="tag-row" style="margin-top: 1rem">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
 
-        <p class="subhead">Ce que j'ai appris</p>
-        <ul class="learned-list">
-          <li>Organiser un projet multi-pages de façon cohérente</li>
-          <li>Stocker des données côté navigateur avec localStorage</li>
-          <li>Adapter une interface au contexte local (FCFA, mobile money)</li>
-        </ul>
+          <p class="subhead">Ce que j'ai travaillé</p>
+          <ul class="learned-list">
+            <li>Conception d'une identité visuelle dédiée au sujet</li>
+            <li>Architecture d'un site multi-pages et responsive</li>
+            <li>Pages d'information, de contact et de mobilisation</li>
+          </ul>
 
-        <div class="hero-actions" style="margin-top: 2rem;">
-          <a href="https://njdev154.github.io/cibanque/" class="btn btn-primary" target="_blank" rel="noopener">Voir la démo</a>
-          <a href="https://github.com/njdev154/cibanque" class="btn btn-secondary" target="_blank" rel="noopener">Voir le code</a>
+          <p class="subhead">Point important</p>
+          <p class="lede" style="margin-top: 0.7rem">
+            C'est une démonstration de conception. Avant une mise en ligne
+            réelle, les contacts et les circuits de collecte doivent être
+            validés avec une structure médicale ou associative partenaire.
+          </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== PROJET 2 : PIGIER CONNECT ===== -->
-  <section id="pigier-connect">
-    <div class="container panel">
-      <div class="section-head">
-        <div class="project-detail-embed">
-          <img src="images/pigier-connect-preview.jpg" alt="Capture d'écran du site Pigier Connect">
-        </div>
-        <span class="project-rev">Projet terminé</span>
-        <h2 style="margin-top: 0.5rem;">Pigier Connect</h2>
-        <p class="lede" style="margin-top: 1rem;">
-          Site web et portail de préinscription réalisé pour présenter les
-          formations de Pigier Yopougon et faciliter l'accès aux
-          informations (filières, FAQ, recherche de formation, formulaire
-          de préinscription).
-        </p>
+    <!-- ===== PROJET 2 : PASSERELLE ===== -->
+    <section id="passerelle">
+      <div class="container panel">
+        <div class="section-head">
+          <div class="project-detail-embed">
+            <img
+              src="images/passerelle-preview.png"
+              alt="Capture d'écran de Passerelle"
+            />
+          </div>
+          <span class="project-rev">Projet full stack</span>
+          <h2 style="margin-top: 0.5rem">Passerelle</h2>
+          <p class="lede" style="margin-top: 1rem">
+            Plateforme web qui rapproche étudiants, entreprises et
+            établissements pour mieux suivre les stages, l'alternance et le
+            premier emploi. Elle va au-delà d'un tableau d'offres : chaque
+            candidature peut être suivie tout au long du parcours.
+          </p>
 
-        <div class="tag-row" style="margin-top: 1rem;">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
-        </div>
+          <div class="tag-row" style="margin-top: 1rem">
+            <span class="tag">Laravel</span>
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Blade</span>
+            <span class="tag">JavaScript</span>
+          </div>
 
-        <p class="subhead">Ce que j'ai travaillé</p>
-        <ul class="learned-list">
-          <li>Structuration de plusieurs pages et navigation</li>
-          <li>Mise en page responsive (Flexbox)</li>
-          <li>FAQ interactive et filtre de recherche en JavaScript</li>
-        </ul>
+          <p class="subhead">Ce que j'ai travaillé</p>
+          <ul class="learned-list">
+            <li>Authentification par e-mail avec vérification de compte</li>
+            <li>Connexion Google en environnement local</li>
+            <li>Espaces adaptés aux étudiants, entreprises, établissements et administration</li>
+            <li>Gestion des offres, candidatures, profils et suivi de stage</li>
+            <li>Base de données MySQL et données de démonstration</li>
+          </ul>
 
-        <p class="subhead">Ce que j'ai appris</p>
-        <ul class="learned-list">
-          <li>Organiser la navigation d'un site à plusieurs sections</li>
-          <li>Rendre une interface utilisable sur mobile et desktop</li>
-          <li>Traiter un formulaire côté client avec confirmation</li>
-        </ul>
-
-        <div class="hero-actions" style="margin-top: 2rem;">
-          <a href="https://njdev154.github.io/pigier-connect/" class="btn btn-primary" target="_blank" rel="noopener">Voir la démo</a>
-          <a href="https://github.com/njdev154/pigier-connect" class="btn btn-secondary" target="_blank" rel="noopener">Voir le code</a>
+          <p class="subhead">Disponibilité</p>
+          <p class="lede" style="margin-top: 0.7rem">
+            Démonstration locale fonctionnelle. La version publique demande un
+            domaine, un hébergement PHP/MySQL et la configuration finale des
+            services e-mail et Google.
+          </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="container footer-row">
-      <span>© 2026 NJ Dev</span>
-      <div class="footer-links">
-        <a href="https://github.com/njdev154" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/junior-ngoran/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:ngoranjunior154@gmail.com">Email</a>
+    <!-- ===== PROJET 3 : CIBANQUE ===== -->
+    <section id="cibanque">
+      <div class="container panel">
+        <div class="section-head">
+          <div class="project-detail-embed">
+            <img
+              src="images/cibanque-preview.jpg"
+              alt="Capture d'écran du site CIBanque"
+            />
+          </div>
+          <span class="project-rev">Projet terminé</span>
+          <h2 style="margin-top: 0.5rem">CIBanque</h2>
+          <p class="lede" style="margin-top: 1rem">
+            Prototype d'interface bancaire, un projet personnel inspiré des
+            services financiers accessibles en Côte d'Ivoire (FCFA, Orange
+            Money, Wave, MTN MoMo). Site 100% statique, sans serveur : les
+            données sont gérées avec <code>localStorage</code> et la
+            connexion/les transactions sont simulées.
+          </p>
+
+          <div class="tag-row" style="margin-top: 1rem">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+
+          <p class="subhead">Ce que j'ai travaillé</p>
+          <ul class="learned-list">
+            <li>Structure HTML de 8 pages liées entre elles</li>
+            <li>
+              Mise en page CSS (mise en forme des tableaux de bord, formulaires)
+            </li>
+            <li>
+              Interactions JavaScript simples (connexion, historique simulés)
+            </li>
+          </ul>
+
+          <p class="subhead">Ce que j'ai appris</p>
+          <ul class="learned-list">
+            <li>Organiser un projet multi-pages de façon cohérente</li>
+            <li>Stocker des données côté navigateur avec localStorage</li>
+            <li>
+              Adapter une interface au contexte local (FCFA, mobile money)
+            </li>
+          </ul>
+
+          <div class="hero-actions" style="margin-top: 2rem">
+            <a
+              href="https://njdev154.github.io/cibanque/"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener"
+              >Voir la démo</a
+            >
+            <a
+              href="https://github.com/njdev154/cibanque"
+              class="btn btn-secondary"
+              target="_blank"
+              rel="noopener"
+              >Voir le code</a
+            >
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <script src="js/main.js"></script>
-</body>
+    <!-- ===== PROJET 4 : PIGIER CONNECT ===== -->
+    <section id="pigier-connect">
+      <div class="container panel">
+        <div class="section-head">
+          <div class="project-detail-embed">
+            <img
+              src="images/pigier-connect-preview.jpg"
+              alt="Capture d'écran du site Pigier Connect"
+            />
+          </div>
+          <span class="project-rev">Projet terminé</span>
+          <h2 style="margin-top: 0.5rem">Pigier Connect</h2>
+          <p class="lede" style="margin-top: 1rem">
+            Site web et portail de préinscription réalisé pour présenter les
+            formations de Pigier Yopougon et faciliter l'accès aux informations
+            (filières, FAQ, recherche de formation, formulaire de
+            préinscription).
+          </p>
+
+          <div class="tag-row" style="margin-top: 1rem">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+
+          <p class="subhead">Ce que j'ai travaillé</p>
+          <ul class="learned-list">
+            <li>Structuration de plusieurs pages et navigation</li>
+            <li>Mise en page responsive (Flexbox)</li>
+            <li>FAQ interactive et filtre de recherche en JavaScript</li>
+          </ul>
+
+          <p class="subhead">Ce que j'ai appris</p>
+          <ul class="learned-list">
+            <li>Organiser la navigation d'un site à plusieurs sections</li>
+            <li>Rendre une interface utilisable sur mobile et desktop</li>
+            <li>Traiter un formulaire côté client avec confirmation</li>
+          </ul>
+
+          <div class="hero-actions" style="margin-top: 2rem">
+            <a
+              href="https://njdev154.github.io/pigier-connect/"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener"
+              >Voir la démo</a
+            >
+            <a
+              href="https://github.com/njdev154/pigier-connect"
+              class="btn btn-secondary"
+              target="_blank"
+              rel="noopener"
+              >Voir le code</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="container footer-row">
+        <span>© 2026 NJ Dev</span>
+        <div class="footer-links">
+          <a href="https://github.com/njdev154" target="_blank" rel="noopener"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/junior-ngoran/"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+          <a href="mailto:ngoranjunior154@gmail.com">Email</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>

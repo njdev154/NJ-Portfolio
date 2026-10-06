@@ -26,8 +26,7 @@
           <li><a href="projets.html">Projets</a></li>
           <li><a href="apropos.html">À propos</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="documents/CV_NGoran_Junior_Charmel_Privat.pdf" target="_blank" rel="noopener" style="color: var(--amber);">CV</a></li>
-          <!-- Le CV sera ajouté ici dès que j'aurai le PDF -->
+          <li><a href="documents/CV_NGoran_Junior_Charmel_Privat.pdf" class="nav-cv" target="_blank" rel="noopener">CV</a></li>
         </ul>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">MENU</button>
@@ -40,7 +39,7 @@
       <div class="hero-text">
         <p class="eyebrow">Étudiant en informatique — Développement d'Applications</p>
         <h1>NJ Dev<span class="accent">.</span></h1>
-        <p class="lede" style="font-size: 1.3rem; color: var(--paper);">
+        <p class="lede lede-strong">
           Développeur Web Junior — en formation.
         </p>
         <p class="lede">
@@ -49,10 +48,10 @@
           stage de validation à Abidjan.
         </p>
 
-        <div class="tag-row" style="margin-top: 1.2rem;">
-          <span class="tag" style="border-color: var(--amber); color: var(--amber);">🎓 Admis en Licence 3</span>
-          <span class="tag" style="border-color: var(--amber); color: var(--amber);">📍 Abidjan, Côte d'Ivoire</span>
-          <span class="tag" style="border-color: var(--amber); color: var(--amber);">🔎 Stage de validation recherché</span>
+        <div class="tag-row hero-tags">
+          <span class="tag tag-accent">Admis en Licence 3</span>
+          <span class="tag tag-accent">Abidjan, Côte d'Ivoire</span>
+          <span class="tag tag-accent">Stage de validation recherché</span>
         </div>
 
         <div class="hero-actions">
@@ -76,7 +75,43 @@
       </div>
 
       <div class="projects-grid">
-        <!-- Projet 1 : CIBanque -->
+        <!-- Projet 1 : Dona CI -->
+        <article class="project-card">
+          <div class="project-thumb">
+            <img src="images/dona-ci-preview.png" alt="Capture d'écran de Dona CI, site de mobilisation autour du don de sang">
+          </div>
+          <div class="project-body">
+            <span class="project-rev">Site vitrine</span>
+            <h3>Dona CI</h3>
+            <p>Plateforme de sensibilisation et de mobilisation autour du don de sang en Côte d'Ivoire.</p>
+            <div class="tag-row">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <a href="projets.html#dona-ci" class="project-link">Voir le détail</a>
+          </div>
+        </article>
+
+        <!-- Projet 2 : Passerelle -->
+        <article class="project-card">
+          <div class="project-thumb">
+            <img src="images/passerelle-preview.png" alt="Capture d'écran de Passerelle, plateforme d'opportunités pour étudiants">
+          </div>
+          <div class="project-body">
+            <span class="project-rev">Projet full stack</span>
+            <h3>Passerelle</h3>
+            <p>Plateforme d'opportunités qui relie étudiants, entreprises et établissements autour des stages et premiers emplois.</p>
+            <div class="tag-row">
+              <span class="tag">Laravel</span>
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+            </div>
+            <a href="projets.html#passerelle" class="project-link">Voir le détail</a>
+          </div>
+        </article>
+
+        <!-- Projet 3 : CIBanque -->
         <article class="project-card">
           <div class="project-thumb">
             <img src="images/cibanque-preview.jpg" alt="Capture d'écran du site CIBanque">
@@ -94,7 +129,7 @@
           </div>
         </article>
 
-        <!-- Projet 2 : Pigier Connect -->
+        <!-- Projet 4 : Pigier Connect -->
         <article class="project-card">
           <div class="project-thumb">
             <img src="images/pigier-connect-preview.jpg" alt="Capture d'écran du site Pigier Connect">
@@ -159,7 +194,7 @@
   <!-- ===== FOOTER ===== -->
   <footer>
     <div class="container footer-row">
-      <span>© 2026 NJ Dev</span>
+      <span>© <span id="year">2026</span> NJ Dev</span>
       <div class="footer-links">
         <a href="https://github.com/njdev154" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/junior-ngoran/" target="_blank" rel="noopener">LinkedIn</a>
@@ -167,6 +202,8 @@
       </div>
     </div>
   </footer>
+
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Retour en haut">↑</button>
 
   <script src="js/main.js"></script>
 </body>

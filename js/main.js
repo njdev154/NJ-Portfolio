@@ -10,12 +10,22 @@
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 
+function setMenuOpen(open) {
+  navLinks.classList.toggle('open', open);
+  navToggle.setAttribute('aria-expanded', open);
+  navToggle.textContent = open ? 'FERMER' : 'MENU';
+  navToggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+}
+
 if (navToggle && navLinks) {
   navToggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    // On met à jour aria-expanded pour l'accessibilité
-    // (utile pour les lecteurs d'écran)
-    navToggle.setAttribute('aria-expanded', isOpen);
+    const willOpen = !navLinks.classList.contains('open');
+    setMenuOpen(willOpen);
+  });
+
+  // Sur mobile, un clic sur un lien ferme le menu
+  navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenuOpen(false));
   });
 }
 
@@ -85,5 +95,28 @@ if (contactForm) {
       submitButton.disabled = false;
       submitButton.textContent = 'Envoyer le message';
     }
+  });
+}
+
+// ---- Année du footer ----
+// new Date() = date d'aujourd'hui. getFullYear() = 2026, 2027, etc.
+const yearEl = document.getElementById('year');
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
+
+// ---- Bouton retour en haut ----
+// Il est caché par défaut (CSS). On ajoute la classe is-visible
+// seulement après un peu de scroll.
+const backToTop = document.getElementById('backToTop');
+
+if (backToTop) {
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY > 400;
+    backToTop.classList.toggle('is-visible', scrolled);
+  });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }

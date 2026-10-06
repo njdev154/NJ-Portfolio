@@ -1,227 +1,296 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>À propos — NJ Dev</title>
-  <meta name="description" content="Le parcours de Junior Ngoran (NJ Dev), étudiant en informatique, BTS IDA admis en Licence 3, à la recherche d'un stage de validation.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>À propos — NJ Dev</title>
+    <meta
+      name="description"
+      content="Le parcours de Junior Ngoran (NJ Dev), étudiant en informatique, BTS IDA admis en Licence 3, à la recherche d'un stage de validation."
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    .timeline { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem; }
-    .timeline-item { display: grid; grid-template-columns: 140px 1fr; gap: 1rem; border-left: 2px solid var(--amber); padding-left: 1.2rem; }
-    .timeline-tag { font-family: var(--font-mono); font-size: 0.8rem; color: var(--amber); }
-    .timeline-body h4 { font-family: var(--font-display); color: var(--paper); font-size: 1.1rem; margin-bottom: 0.2rem; }
-    .timeline-body p { font-size: 0.9rem; color: var(--ink-line); }
-    @media (max-width: 640px) { .timeline-item { grid-template-columns: 1fr; } }
-  </style>
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        gap: 1rem;
+        border-left: 2px solid var(--amber);
+        padding-left: 1.2rem;
+      }
+      .timeline-tag {
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        color: var(--amber);
+      }
+      .timeline-body h4 {
+        font-family: var(--font-display);
+        color: var(--paper);
+        font-size: 1.1rem;
+        margin-bottom: 0.2rem;
+      }
+      .timeline-body p {
+        font-size: 0.9rem;
+        color: var(--ink-line);
+      }
+      @media (max-width: 640px) {
+        .timeline-item {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blueprint-grid" aria-hidden="true"></div>
 
-  <div class="blueprint-grid" aria-hidden="true"></div>
-
-  <!-- ===== NAVIGATION ===== -->
-  <header class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo">NJ<span>_</span>DEV</a>
-      <nav>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="projets.html">Projets</a></li>
-          <li><a href="apropos.html" aria-current="page">À propos</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="documents/CV_NGoran_Junior_Charmel_Privat.pdf" target="_blank" rel="noopener" style="color: var(--amber);">CV</a></li>
-        </ul>
-      </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">MENU</button>
-    </div>
-  </header>
-
-  <!-- ===== EN-TÊTE ===== -->
-  <section class="hero" style="min-height: 30vh;">
-    <div class="container">
-      <h1>À propos de moi</h1>
-    </div>
-  </section>
-
-  <!-- ===== QUI JE SUIS ===== -->
-  <section id="qui-je-suis">
-    <div class="container panel">
-      <p class="lede">
-        Je suis Junior Ngoran, étudiant en informatique et développeur web
-        junior. Titulaire d'un BTS en Développement d'Applications (IDA,
-        orientation Réseaux &amp; Génie Logiciel) à PIGIER Côte d'Ivoire,
-        je viens d'être admis en Licence 3.
-      </p>
-      <p class="lede" style="margin-top: 1rem;">
-        Je m'intéresse à la création de sites et d'interfaces web, et je
-        progresse principalement à travers des projets pratiques. Je suis
-        encore en phase d'apprentissage, mais j'aime apprendre en
-        pratiquant et transformer mes idées en projets concrets.
-      </p>
-      <p class="lede" style="margin-top: 1rem;">
-        Je recherche actuellement un <strong style="color: var(--amber);">stage de validation</strong>
-        à Abidjan afin de découvrir le fonctionnement d'une équipe
-        professionnelle, améliorer mes compétences et acquérir une
-        première expérience concrète.
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== PARCOURS ===== -->
-  <section id="parcours">
-    <div class="container panel">
-      <div class="section-head">
-        <p class="eyebrow">Formation</p>
-        <h2>Mon parcours</h2>
+    <!-- ===== NAVIGATION ===== -->
+    <header class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">NJ<span>_</span>DEV</a>
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="apropos.html" aria-current="page">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <a
+                href="documents/CV_NGoran_Junior_Charmel_Privat.pdf"
+                target="_blank"
+                rel="noopener"
+                style="color: var(--amber)"
+                >CV</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+        >
+          MENU
+        </button>
       </div>
+    </header>
 
-      <div class="timeline">
-        <div class="timeline-item">
-          <span class="timeline-tag">2023–2024</span>
-          <div class="timeline-body">
-            <h4>Baccalauréat Série D</h4>
-            <p>Collège Le Rodin, Yopougon.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-tag">2024–2025</span>
-          <div class="timeline-body">
-            <h4>Début de la Licence (système LMD)</h4>
-            <p>PIGIER Côte d'Ivoire. Le système LMD de PIGIER permet de passer le BTS en arrivant en 2ᵉ année, ce que j'ai fait.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-tag">Août 2026</span>
-          <div class="timeline-body">
-            <h4>BTS Informatique — Développeur d'Application (IDA)</h4>
-            <p>Orientation Réseaux &amp; Génie Logiciel (RGL). Diplôme obtenu le 20 août 2026.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-tag">Aujourd'hui</span>
-          <div class="timeline-body">
-            <h4>Admis en Licence 3 — Informatique</h4>
-            <p>Développement web en parallèle (HTML, CSS, JavaScript) — à la recherche d'un stage de validation.</p>
-          </div>
-        </div>
+    <!-- ===== EN-TÊTE ===== -->
+    <section class="hero" style="min-height: 30vh">
+      <div class="container">
+        <h1>À propos de moi</h1>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== COMPÉTENCES ===== -->
-  <section id="competences">
-    <div class="container panel">
-      <div class="section-head">
-        <p class="eyebrow">Honnêtement</p>
-        <h2>Mes compétences</h2>
+    <!-- ===== QUI JE SUIS ===== -->
+    <section id="qui-je-suis">
+      <div class="container panel">
+        <p class="lede">
+          Je suis Junior Ngoran, étudiant en informatique et développeur web
+          junior. Titulaire d'un BTS en Développement d'Applications (IDA,
+          orientation Réseaux &amp; Génie Logiciel) à PIGIER Côte d'Ivoire, je
+          viens d'être admis en Licence 3.
+        </p>
+        <p class="lede" style="margin-top: 1rem">
+          Je m'intéresse à la création de sites et d'interfaces web, et je
+          progresse principalement à travers des projets pratiques. Je suis
+          encore en phase d'apprentissage, mais j'aime apprendre en pratiquant
+          et transformer mes idées en projets concrets.
+        </p>
+        <p class="lede" style="margin-top: 1rem">
+          Je recherche actuellement un
+          <strong style="color: var(--amber)">stage de validation</strong>
+          à Abidjan afin de découvrir le fonctionnement d'une équipe
+          professionnelle, améliorer mes compétences et acquérir une première
+          expérience concrète.
+        </p>
       </div>
+    </section>
 
-      <div class="annotation-list">
-        <div class="annotation">
-          <span class="annotation-code">Bases</span>
-          <div class="annotation-body">
-            <h4>HTML</h4>
-            <p>Structure de pages web complètes, formulaires.</p>
-          </div>
+    <!-- ===== PARCOURS ===== -->
+    <section id="parcours">
+      <div class="container panel">
+        <div class="section-head">
+          <p class="eyebrow">Formation</p>
+          <h2>Mon parcours</h2>
         </div>
-        <div class="annotation">
-          <span class="annotation-code">Bases</span>
-          <div class="annotation-body">
-            <h4>CSS</h4>
-            <p>Mise en page (Flexbox, Grid), responsive design.</p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-tag">2023–2024</span>
+            <div class="timeline-body">
+              <h4>Baccalauréat Série D</h4>
+              <p>Collège Le Rodin, Yopougon.</p>
+            </div>
           </div>
-        </div>
-        <div class="annotation">
-          <span class="annotation-code">Débutant</span>
-          <div class="annotation-body">
-            <h4>JavaScript</h4>
-            <p>Manipulation du DOM, événements, logique simple.</p>
+          <div class="timeline-item">
+            <span class="timeline-tag">2024–2025</span>
+            <div class="timeline-body">
+              <h4>Début de la Licence (système LMD)</h4>
+              <p>
+                PIGIER Côte d'Ivoire. Le système LMD de PIGIER permet de passer
+                le BTS en arrivant en 2ᵉ année, ce que j'ai fait.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="annotation">
-          <span class="annotation-code">Bases</span>
-          <div class="annotation-body">
-            <h4>Git / GitHub</h4>
-            <p>Gestion et partage de projets.</p>
+          <div class="timeline-item">
+            <span class="timeline-tag">Août 2026</span>
+            <div class="timeline-body">
+              <h4>BTS Informatique — Développeur d'Application (IDA)</h4>
+              <p>
+                Orientation Réseaux &amp; Génie Logiciel (RGL). Diplôme obtenu
+                le 20 août 2026.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="annotation">
-          <span class="annotation-code">Notions</span>
-          <div class="annotation-body">
-            <h4>Bases de données</h4>
-            <p>Modélisation et requêtes de base, vues en BTS IDA.</p>
-          </div>
-        </div>
-        <div class="annotation">
-          <span class="annotation-code">Notions</span>
-          <div class="annotation-body">
-            <h4>Bases de données</h4>
-            <p>SQL, MySQL, modélisation Merise (MCD, MCT).</p>
-          </div>
-        </div>
-        <div class="annotation">
-          <span class="annotation-code">Notions</span>
-          <div class="annotation-body">
-            <h4>Langage C</h4>
-            <p>Bases de la programmation structurée, vues en BTS IDA.</p>
-          </div>
-        </div>
-        <div class="annotation">
-          <span class="annotation-code">Certifié</span>
-          <div class="annotation-body">
-            <h4>Excel</h4>
-            <p>Microsoft Office Specialist — Excel 2016 (Certiport, juin 2025).</p>
+          <div class="timeline-item">
+            <span class="timeline-tag">Aujourd'hui</span>
+            <div class="timeline-body">
+              <h4>Admis en Licence 3 — Informatique</h4>
+              <p>
+                Développement web en parallèle (HTML, CSS, JavaScript) — à la
+                recherche d'un stage de validation.
+              </p>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <p class="eyebrow" style="margin-top: 2rem;">Ce que j'apprends actuellement</p>
-      <p class="lede" style="margin-top: 0.5rem;">
-        Je renforce mes bases en HTML, CSS et JavaScript, et je découvre
-        progressivement le développement Full Stack.
-      </p>
-    </div>
-  </section>
+    <!-- ===== COMPÉTENCES ===== -->
+    <section id="competences">
+      <div class="container panel">
+        <div class="section-head">
+          <p class="eyebrow">Honnêtement</p>
+          <h2>Mes compétences</h2>
+        </div>
 
-  <!-- ===== QUALITÉS & CENTRES D'INTÉRÊT ===== -->
-  <section id="qualites">
-    <div class="container panel">
-      <div class="section-head">
-        <p class="eyebrow">En dehors du code</p>
-        <h2>Un peu plus sur moi</h2>
+        <div class="annotation-list">
+          <div class="annotation">
+            <span class="annotation-code">Bases</span>
+            <div class="annotation-body">
+              <h4>HTML</h4>
+              <p>Structure de pages web complètes, formulaires.</p>
+            </div>
+          </div>
+          <div class="annotation">
+            <span class="annotation-code">Bases</span>
+            <div class="annotation-body">
+              <h4>CSS</h4>
+              <p>Mise en page (Flexbox, Grid), responsive design.</p>
+            </div>
+          </div>
+          <div class="annotation">
+            <span class="annotation-code">Débutant</span>
+            <div class="annotation-body">
+              <h4>JavaScript</h4>
+              <p>Manipulation du DOM, événements, logique simple.</p>
+            </div>
+          </div>
+          <div class="annotation">
+            <span class="annotation-code">Bases</span>
+            <div class="annotation-body">
+              <h4>Git / GitHub</h4>
+              <p>Gestion et partage de projets.</p>
+            </div>
+          </div>
+          <div class="annotation">
+            <span class="annotation-code">Notions</span>
+            <div class="annotation-body">
+              <h4>Bases de données</h4>
+              <p>Modélisation et requêtes de base, vues en BTS IDA.</p>
+            </div>
+          </div>
+          <div class="annotation">
+            <span class="annotation-code">Notions</span>
+            <div class="annotation-body">
+              <h4>Bases de données</h4>
+              <p>SQL, MySQL, modélisation Merise (MCD, MCT).</p>
+            </div>
+          </div>
+          <div class="annotation">
+            <span class="annotation-code">Notions</span>
+            <div class="annotation-body">
+              <h4>Langage C</h4>
+              <p>Bases de la programmation structurée, vues en BTS IDA.</p>
+            </div>
+          </div>
+          <div class="annotation">
+            <span class="annotation-code">Certifié</span>
+            <div class="annotation-body">
+              <h4>Excel</h4>
+              <p>
+                Microsoft Office Specialist — Excel 2016 (Certiport, juin 2025).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <p class="eyebrow" style="margin-top: 2rem">
+          Ce que j'apprends actuellement
+        </p>
+        <p class="lede" style="margin-top: 0.5rem">
+          Je renforce mes bases en HTML, CSS et JavaScript, et je découvre
+          progressivement le développement Full Stack.
+        </p>
       </div>
+    </section>
 
-      <div class="tag-row" style="margin-bottom: 1.5rem;">
-        <span class="tag">Apprentissage rapide</span>
-        <span class="tag">Rigueur &amp; ponctualité</span>
-        <span class="tag">Esprit d'équipe</span>
-        <span class="tag">Curiosité</span>
-        <span class="tag">Persévérance</span>
+    <!-- ===== QUALITÉS & CENTRES D'INTÉRÊT ===== -->
+    <section id="qualites">
+      <div class="container panel">
+        <div class="section-head">
+          <p class="eyebrow">En dehors du code</p>
+          <h2>Un peu plus sur moi</h2>
+        </div>
+
+        <div class="tag-row" style="margin-bottom: 1.5rem">
+          <span class="tag">Apprentissage rapide</span>
+          <span class="tag">Rigueur &amp; ponctualité</span>
+          <span class="tag">Esprit d'équipe</span>
+          <span class="tag">Curiosité</span>
+          <span class="tag">Persévérance</span>
+        </div>
+
+        <p class="eyebrow">Centres d'intérêt</p>
+        <p class="lede" style="margin-top: 0.5rem">
+          Gaming / jeux vidéo, sport, lecture, veille technologique et
+          auto-formation.
+        </p>
       </div>
+    </section>
 
-      <p class="eyebrow">Centres d'intérêt</p>
-      <p class="lede" style="margin-top: 0.5rem;">
-        Gaming / jeux vidéo, sport, lecture, veille technologique et auto-formation.
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="container footer-row">
-      <span>© 2026 NJ Dev</span>
-      <div class="footer-links">
-        <a href="https://github.com/njdev154" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/junior-ngoran/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:ngoranjunior154@gmail.com">Email</a>
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="container footer-row">
+        <span>© 2026 NJ Dev</span>
+        <div class="footer-links">
+          <a href="https://github.com/njdev154" target="_blank" rel="noopener"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/junior-ngoran/"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+          <a href="mailto:ngoranjunior154@gmail.com">Email</a>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="js/main.js"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>
