@@ -430,6 +430,13 @@ section {
   object-position: top;
 }
 
+/* Certaines captures sont volontairement plus larges que leur cadre. */
+.project-thumb img.project-shot-contain,
+.project-detail-embed img.project-shot-contain {
+  object-fit: contain;
+  background: var(--paper-dim);
+}
+
 .project-body {
   padding: var(--gap-md);
   display: flex;
